@@ -1,9 +1,25 @@
-const lesson = (title, skill, minutes, type = 'video', content = '') => ({
+// const lesson = (title, skill, minutes, type = 'video', content = '') => ({
+//   title,
+//   skill,
+//   minutes,
+//   type,
+//   content,
+//   order: 0,
+// });
+const lesson = (
+  title,
+  skill,
+  minutes,
+  type = 'video',
+  content = '',
+  videoUrl = ''
+) => ({
   title,
   skill,
   minutes,
   type,
   content,
+  videoUrl,
   order: 0,
 });
 
@@ -229,7 +245,14 @@ export const courses = [
         summary: 'Getting comfortable with how the pieces really work.',
         order: 1,
         lessons: [
-          lesson('How each piece moves', 'Openings', 8, 'video'),
+          lesson(
+    'How each piece moves',
+    'Openings',
+    8,
+    'video',
+    '',
+    'OCSbzArwB10'
+  ),
           lesson('Controlling the centre', 'Openings', 9, 'video'),
           lesson('Castling early', 'Openings', 7, 'video'),
           lesson('Puzzle set: 10 opening positions', 'Openings', 15, 'challenge'),

@@ -230,11 +230,18 @@ export default function Learn() {
                 {isOpen && (
                   <div className="px-4 pb-5 ml-9">
                     <div className="bg-ink text-paper/50 rounded-card aspect-video flex items-center justify-center text-sm">
-                      {lesson.videoUrl ? (
+                      {/* {lesson.videoUrl ? (
                         <video src={lesson.videoUrl} controls className="w-full h-full" />
                       ) : (
                         'Lesson video goes here'
-                      )}
+                      )} */}
+                      <iframe
+    className="w-full aspect-video rounded-xl"
+    src={`https://www.youtube.com/embed/${lesson.videoUrl}`}
+    title={lesson.title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
                     </div>
                     {lesson.content && (
                       <p className="text-sm mt-4 leading-relaxed max-w-prose">{lesson.content}</p>
