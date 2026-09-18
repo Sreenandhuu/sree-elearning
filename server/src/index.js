@@ -10,7 +10,19 @@ import { notFound, errorHandler } from './middleware/error.js';
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://client-chi-one-58.vercel.app',
+  'https://client-git-main-sreenandhuus-projects.vercel.app'
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true
+  })
+);
+// app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 

@@ -229,6 +229,8 @@ export default function Learn() {
 
                 {isOpen && (
                   <div className="px-4 pb-5 ml-9">
+
+                    
                     <div className="bg-ink text-paper/50 rounded-card aspect-video flex items-center justify-center text-sm">
                       {/* {lesson.videoUrl ? (
                         <video src={lesson.videoUrl} controls className="w-full h-full" />
